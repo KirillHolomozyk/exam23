@@ -37,3 +37,8 @@ jobs:
     - name: Run tests
       run: |
         python3 -m unittest test.py
+    
+    - name: Build and push the tagged docker image to Amazon ECR
+      run: |
+        docker build -t kirillkirusha/exam23 .
+        docker push kirillkirusha/exam23
